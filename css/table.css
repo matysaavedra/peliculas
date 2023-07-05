@@ -1,0 +1,10 @@
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+table, th, td{
+    margin: auto; /*centramos la tabla*/
+    border-collapse: collapse;/*fusionamos los bordes*/
+    border: 1px solid black; /*Agregamos la division de las celdas*/
+    padding: 8px 20px; /*Relleno de la tabla*/
+}
