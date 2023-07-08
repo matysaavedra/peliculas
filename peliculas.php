@@ -5,13 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/peliculas.css">
 </head>
 <body>
     <?php
     include("db.php");
     ?>
-    <a href="index.html">Regresar al Inicio</a>
     <form method="post">
         <label for="">Tipo: </label>
         <input class="controls" type="text" name="tipo"> <br>
@@ -19,7 +17,8 @@
         <input class="controls" type="text" name="titulo"> <br>
         <label for="">Recomendada</label>
         <input class="controls" type="text" name="recomendada">
-        <input class="controls" type="submit" name="register">
+        <input class="controls" type="submit" name="register" value="Agregar Recomendacion">
+        
     </form>
     
     <?php
@@ -33,16 +32,16 @@
                 $resultado = mysqli_query($conex, $consulta);
                 if($resultado){
                     ?>
-                    <h3 class="ok">Se Ingresaron Los datos</h3>
+                    <p class="ok">Se Ingresaron Los datos</p>
                     <?php
                 } else{
                     ?>
-                    <h3 class="bad">Ups ha ocurrido un error</h3>
+                    <p class="bad">Ups ha ocurrido un error</p>
                     <?php
                 }
             }else{
                 ?>
-                <h3 class="bad">Por favor complete los campos</h3>
+                <p class="bad">Por favor complete los campos</p>
                 <?php
                 }
             }
